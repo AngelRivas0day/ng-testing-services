@@ -9,7 +9,7 @@ import {HTTP_INTERCEPTORS, HttpStatusCode} from "@angular/common/http";
 import {TokenInterceptor} from "../interceptors/token.interceptor";
 import {TokenService} from "./token.service";
 
-describe('ProductService', () => {
+fdescribe('ProductService', () => {
 	let productService: ProductService;
 	let httpController: HttpTestingController;
 	let tokenService: TokenService;
@@ -38,7 +38,7 @@ describe('ProductService', () => {
 		expect(productService).toBeTruthy();
 	});
 
-	describe('Tests for getAllSimple', () => {
+	fdescribe('Tests for getAllSimple', () => {
 		it('should return product list', (doneFn) => {
 			const mock: Product[] = generateManyProduct(2);
 			spyOn(tokenService, 'getToken').and.returnValue('123token123');
@@ -56,7 +56,7 @@ describe('ProductService', () => {
 		});
 	});
 
-	describe('Tests for getAll', () => {
+	fdescribe('Tests for getAll', () => {
 		it('should return product list', (doneFn) => {
 			const mock: Product[] = generateManyProduct(3);
 			productService.getAll()
@@ -121,7 +121,7 @@ describe('ProductService', () => {
 		});
 	});
 
-	describe('Tests for create', () => {
+	fdescribe('Tests for create', () => {
 		it('should return a new product', (doneFn) => {
 			const mock: Product = generateOneProduct();
 			const dto: CreateProductDTO = {
@@ -146,7 +146,7 @@ describe('ProductService', () => {
 		});
 	});
 
-	describe('Tests for getOne', () => {
+	fdescribe('Tests for getOne', () => {
 		it('should return a product', (doneFn) => {
 			const mock: Product = generateOneProduct();
 			const id: string = '5';
@@ -184,7 +184,7 @@ describe('ProductService', () => {
 		});
 	});
 
-	describe('Tests for update', () => {
+	fdescribe('Tests for update', () => {
 		it('should return a updated product', (doneFn) => {
 			const mock: Product = generateOneProduct();
 			const id: string = '5';
@@ -206,7 +206,7 @@ describe('ProductService', () => {
 		});
 	});
 
-	describe('Tests for delete', () => {
+	fdescribe('Tests for delete', () => {
 		it('should return true for a deleted product', (doneFn) => {
 			const id: string = '5';
 			productService.delete(id)

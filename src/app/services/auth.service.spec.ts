@@ -30,7 +30,7 @@ fdescribe('AuthService', () => {
 		expect(authService).toBeTruthy();
 	});
 
-	describe('Tests for login', () => {
+	fdescribe('Tests for login', () => {
 		it('should return a token', (doneFn) => {
 			const mock: Auth = {
 				access_token: '123token123',
